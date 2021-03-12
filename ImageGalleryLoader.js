@@ -1,4 +1,4 @@
-var folder = "/StoreOfTheFutureDemo/Database/";
+var folder = "/StoreOfTheFutureDemo/Database";
 
 $.ajax({
     url : folder,
