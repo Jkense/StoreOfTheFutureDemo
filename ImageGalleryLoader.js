@@ -1,15 +1,18 @@
 var folder = "/StoreOfTheFutureDemo/Database/";
- 
-var ajax=new XMLHttpRequest()
-ajax.open("GET",folder,true)
-ajax.onload=function () {
-    var elements=(new DOMParser()).parseFromString(ajax.responseText,"text/html").getElementsByTagname("A")
-    for(x of elements){
-        if(request.status[0]==2 && x.href.match(/\.(jpe?g|png|gif)$/)) { 
-            let img=document.createElement("IMG")
-            img.src=folder+x.href
-            document.body.appendChild(img);
-        } 
-    };
-}
-ajax.send()
+
+$.ajax({
+    url : folder,
+    success: function (data) {
+        $(data).find("a").attr("href", function (i, val) {
+            if( val.match(/\.(jpe?g|png|gif)$/) ) { 
+                var _img = document.getElementById('body');
+                var newImg = new Image;
+                newImg.onload = function() {
+                    _img.src = this.src;
+                }
+                newImg.src = 'http://'+folder + val;
+                console.log('http://'+folder + val);
+            } 
+        });
+    }
+});
