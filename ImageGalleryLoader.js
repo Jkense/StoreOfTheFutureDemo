@@ -1,13 +1,15 @@
-var folder = "/StoreOfTheFutureDemo/Database";
-
-$.ajax({
-    url : folder,
-    success: function (data) {
-        $(data).find("a").attr("href", function (i, val) {
-            if( val.match(/\.(jpe?g|JPG|png|gif)$/) ) { 
-                $("body").append( "<img class='img-fluid' alt='100%x280' src='"+ folder + val +"'>");
-            } 
-        });
-    }
-});
-
+var folder = "/StoreOfTheFutureDemo/Database/";
+ 
+var ajax=new XMLHttpRequest()
+ajax.open("GET",folder,true)
+ajax.onload=function () {
+    var elements=(new DOMParser()).parseFromString(ajax.responseText,"text/html").getElementsByTagname("A")
+    for(x of elements){
+        if(request.status[0]==2 && x.href.match(/\.(jpe?g|png|gif)$/)) { 
+            let img=document.createElement("IMG")
+            img.src=folder+x.href
+            document.body.appendChild(img);
+        } 
+    };
+}
+ajax.send()
