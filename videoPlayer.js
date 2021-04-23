@@ -70,7 +70,7 @@ const initVideo = () => {
     video.autoplay = true;
 
     const option = {
-        video: false,
+        video: true,
         audio: false
     };
     navigator.mediaDevices.getUserMedia(option)
