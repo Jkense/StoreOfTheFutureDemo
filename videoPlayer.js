@@ -95,7 +95,7 @@ const initAudio = () => {
 
     const audioLoader = new THREE.AudioLoader();
     // https://www.newgrounds.com/audio/listen/232941
-    audioLoader.load('/StoreOfTheFutureDemo/asset/232941_New.MP3', (buffer) => {
+    audioLoader.load('/StoreOfTheFutureDemo/asset/fisher-losing-it.mp3', (buffer) => {
         document.body.classList.remove(classNameForLoading);
 
         audio.setBuffer(buffer);
