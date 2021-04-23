@@ -22,6 +22,20 @@ a {
   top: 75%;
 }
 
+.storeButtonRight { 
+  position: absolute; 
+  width: 175px; 
+  left: calc(60% - 86.5px); 
+  top: 75%;
+}
+
+.storeButtonLeft { 
+  position: absolute; 
+  width: 175px; 
+  left: calc(40% - 86.5px); 
+  top: 75%;
+}
+
 #audioPlayer {
   position: absolute; 
   width: 300px; 

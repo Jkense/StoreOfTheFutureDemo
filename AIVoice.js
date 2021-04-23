@@ -18,14 +18,14 @@
   //Switch to branch symmetric-spectrum using "git checkout symmetric-spectrum" if you want symmetric spectrum.
   
   function draw() {
-    background(0, 0);
+    background(255);
     
     let spectrum = fft.analyze();
+    fill(0);
     for (let i = 0; i < spectrum.length; i++) {
-      fill(255,255,255);
       let amp = spectrum[i];
       let y = map(amp, 0, 256, height, 0);
-      rect(i * space_between_lines, y, space_between_lines, height - y);
+      rect(width - (i * space_between_lines), y, space_between_lines, height - y);
     }
   }
   
