@@ -39,6 +39,6 @@ function preload(){
     if (sound.isPlaying()) {
       sound.pause();
     } else {
-      sound.loop();
+      sound.play();
     }
   }
