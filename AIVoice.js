@@ -1,23 +1,15 @@
-  let song, buttton, fft, space_between_lines;
-
-  function toggleSong() {
-    if(song.isPlaying()) {
-      song.pause();
-    } else {
-      song.play();
-    }
-  }
+  let song, buttton, fft, space_between_lines = 2;
   
   function preload() {
     song = loadSound('/StoreOfTheFutureDemo/asset/voicebooking-speech.wav');
   }
   
   function setup() {
-    createCanvas(600, 600);
+    let canvas = createCanvas(600, 600);
+    canvas.parent("p5");
     angleMode(DEGREES); // Change the mode to DEGREES
     colorMode(HSB);
     buttton = select('#audioPlayer');
-    buttton.mousePressed(toggleSong);
     song.play();  
     fft = new p5.FFT(0.9, 128);
     space_between_lines = width / 128;
@@ -30,7 +22,7 @@
     
     let spectrum = fft.analyze();
     for (let i = 0; i < spectrum.length; i++) {
-      fill(i,255,255);
+      fill(255,255,255);
       let amp = spectrum[i];
       let y = map(amp, 0, 256, height, 0);
       rect(i * space_between_lines, y, space_between_lines, height - y);
