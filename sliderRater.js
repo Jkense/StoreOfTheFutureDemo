@@ -30,7 +30,8 @@ let a;
 let t = [1,4,3,2,5];
 
 function setup(){
-  createCanvas(canvaswidth,canvasheight);
+  let canvas = createCanvas(canvaswidth,canvasheight);
+  canvas.parent("p5");
   capture = createCapture(VIDEO);
   capture.size(canvaswidth, canvasheight);
   capture.hide();
