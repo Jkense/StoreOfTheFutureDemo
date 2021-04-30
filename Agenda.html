@@ -12,17 +12,23 @@
 
         <link rel="stylesheet" href="style.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    </head>
+	
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <link rel="stylesheet" href="timeline.css">
+        <script src="timeline.js"></script>
+    
+</head>
     <body>
+        <div id="timeline" data-currentTime="2"></div>
         <div id="p5">
 
         </div>
 
-        <audio id="audioPlayer" class=" noselect" controls>
-            <source class="center" src="asset/voicebooking-speech.wav" type="audio/wav">
+        <audio id="audioPlayer" class="noselect showMe" controls>
+            <source class="center" src="asset/voiceOver/AI_page 1_Agenda.mp3" type="audio/wav">
           Your browser does not support the audio element.
         </audio>
-        <a href="sliderRater.html">
+        <a class="showMe" href="sliderRater.html">
             <button type="button" class="storeButton btn btn-primary" >
               Let's start the scan!
             </button>

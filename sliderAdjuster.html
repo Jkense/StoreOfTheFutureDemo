@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="utf-8" />   
-  <title>Can it be my de la clothes?</title>
+  <title>Or is it just my de la song?</title>
   <link rel="icon" type="image/png" href="/StoreOfTheFutureDemo/asset/favicon.png"/>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.9.0/p5.js"></script>
@@ -11,8 +11,7 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.9.0/addons/p5.sound.min.js"></script>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
   
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script src="confetti.js"></script>
+  <script src="sliderRater.js"></script>
   <link rel="stylesheet" href="style.css">
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -21,20 +20,19 @@
 
 </head>
 <body>
-  <div id="timeline" data-currentTime="8"></div>
+  <div id="timeline" data-currentTime="4"></div>
+    <div id="p5">
 
-  <div style="position: relative; top: 250px;">
-    <h1 class="text-center">Congratulations!</h1>
-    <h2 class="text-center">Enjoy your special night out</h2>
-  </div>
-    <a href="VideoPlayer.html">
-        <button type="button" class="storeButtonLeft btn btn-primary" >
-          Let the party start!
-        </button>
-    </a>
-    <a href="https://www.notion.so/itd2021/Group-16-28b677e37fc54ec2a995aa548082ca1d" target="_blank">
-        <button type="button" class="storeButtonRight btn btn-info" >
-          How does this work?
+    </div>
+
+    <audio id="audioPlayer" class="noselect showMe" controls>
+      <source class="center" src="asset/voiceOver/AI_page 3_score.mp3" type="audio/wav">
+      Your browser does not support the audio element.
+    </audio>
+
+    <a class="showMe" href="checkout.html">
+        <button type="button" class="storeButton btn btn-primary" >
+          Let the party start! Let's try on some clothing
         </button>
     </a>
 </body>

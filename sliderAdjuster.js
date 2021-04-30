@@ -1,4 +1,4 @@
-var start = 0;
+var start = 2;
 var condition = 0;
 let i = 0;
 var words = ['Chic','Serious','Casual','Cheerful','Smart','Bohemian', 'Vintage', 'Business']; 
@@ -21,6 +21,8 @@ let scorey= captureheight+80;
 
 let scorex1 = scorex+150;
 
+var scorexslide = scorex+150;
+
 let white = 255;
 let black = 0;
 let grey = 150;
@@ -33,6 +35,7 @@ let c5 = c4 + 60
 
 var fill1 = 160;
 var fill2 = 0;
+var fill3 = 255;
 
 var r1x = 600;
 var r1y = -4;
@@ -48,8 +51,8 @@ let fr = 10;
 let a;
 
     var p1 = 50;
-    var p2 = 30;
-    var p3 = 20;
+    var p2 = 40;
+    var p3 = 26;
     var p4 = 10;
     var p5 = 10;
 
@@ -59,6 +62,8 @@ var waarde3 = p3*2.55
 var waarde4 = p4*2.55
 var waarde5 = p5*2.55
 
+var rxslide = 255
+
 let f=2.55
 
 let t = [1,4,3,2,5];
@@ -66,37 +71,38 @@ let t = [1,4,3,2,5];
 function setup() {
   var canvas = createCanvas(canvaswidth,canvasheight);
   canvas.parent("#p5");
-   
   capture = createCapture(VIDEO);
   capture.size(capturewidth, captureheight);
   capture.hide();
   
-  //slider1= createSlider(0, 255, p1*2.55);
-   // slider1.position(25, 270);
-   // slider1.style('width', '80px');
+  slider1= createSlider(0, 255,waarde1);
+  slider1.position(scorexslide, scorey+35);
+  slider1.style('width', '300px');
   
-  //slider2= createSlider(0, 255, p2*2.55);
-    //slider2.position(26,300);
-//    slider2.style('width', '80px');
+  slider2= createSlider(0, 255, waarde2);
+  slider2.position(scorexslide,scorey+95);
+  slider2.style('width', '300px');
   
-  //slider3= createSlider(0, 255, p3*2.55);
-    //slider3.position(26,330);
-    //slider3.style('width', '80px');
+  slider3= createSlider(0, 255, waarde3);
+  slider3.position(scorexslide,scorey+155);
+  slider3.style('width', '300px');
   
-  //slider4= createSlider(0, 255, p4*2.55);
-   // slider4.position(26,360);
-   // slider4.style('width', '80px');
+  slider4= createSlider(0, 255, waarde4);
+  slider4.position(scorexslide,scorey+215);
+  slider4.style('width', '300px');
   
-  //slider5= createSlider(0, 255, p5*2.55);
-    //slider5.position(26,390);
-    //slider5.style('width', '80px');
+  slider5= createSlider(0, 255, waarde5);
+  slider5.position(scorexslide,scorey+275);
+  slider5.style('width', '300px');
+  
+  
 }
 
 function draw() {
   background(black); 
   
     noStroke();
-  fill(0);
+  fill(black);
     rect(300,450, 600, 500);
   
   image(capture, 0, 0, capturewidth, captureheight);
@@ -110,9 +116,9 @@ function draw() {
     fill2 = 0;
     noStroke();
     fill(0,255,0, 160);
-    rect(0,r3y,600,10);
+    rect(300,r3y,600,10);
     fill(0,255,0,fill2);
-    rect(0,r3y+3,600,4);
+    rect(300,r3y+3,600,4);
     
     r3y = r3y -= 2;
     
@@ -130,9 +136,9 @@ function draw() {
   if(start == 1){
     noStroke();
     fill(0,255,0,fill1);
-    rect(0,r1y,600,10);
+    rect(300,r1y,600,10);
     fill(0,255,0,fill2);
-    rect(0,r1y+3,600,4);
+    rect(300,r1y+3,600,4);
     //rect(r2x,r2y,10,canvasheight, 50);
     //de verhouding moet hier altijd hetzelfde zijn als Width/height
     r1y = r1y += 2;
@@ -146,19 +152,19 @@ function draw() {
     
     var word = random(words);
     fill(grey);
-    rect(scorex1,scorey, 100*f, 30);
+    rect(scorex1,scorey, 300, 30);
     
     fill(grey);
-    rect(scorex1, scorey+c1, 100*f, 30);
+    rect(scorex1, scorey+c1, 300, 30);
     
     fill(grey);
-    rect(scorex1, scorey+c2, 100*f, 30);
+    rect(scorex1, scorey+c2, 300, 30);
     
     fill(grey);
-    rect(scorex1, scorey+c3, 100*f, 30);
+    rect(scorex1, scorey+c3, 300, 30);
     
     fill(grey);
-    rect(scorex1, scorey+c4, 100*f, 30);
+    rect(scorex1, scorey+c4, 300, 30);
     
     fill(white);
     rect(scorex1,scorey, 5, 30);
@@ -188,16 +194,17 @@ function draw() {
   
   if(start == 2){
     finalword = words[round(a)];
-    //let x1waarde = map(slider1.value(), 0, 255, 0, 300);
-    //let x2waarde = map(slider2.value(), 0, 255, 0, 300);
-    //let x3waarde = map(slider3.value(), 0, 255, 0, 300);
-    //let x4waarde = map(slider4.value(), 0, 255, 0, 300);
-    //let x5waarde = map(slider5.value(), 0, 255, 0, 300);
+    let x1waarde = map(slider1.value(), 0, 255, 0, 300);
+    let x2waarde = map(slider2.value(), 0, 255, 0, 300);
+    let x3waarde = map(slider3.value(), 0, 255, 0, 300);
+    let x4waarde = map(slider4.value(), 0, 255, 0, 300);
+    let x5waarde = map(slider5.value(), 0, 255, 0, 300);
 
     //fill(0,0,0);
     //rect(25,230, 430, 30);
     //fill(255,255,255);
     //text(finalword,30,250);
+    
     
     fill(white);
     text('Percentage'+' '+'of'+' '+'visual'+" "+'representation',scorex1+30, scorey-40);
@@ -206,56 +213,45 @@ function draw() {
     text('Characteristics',scorex+4, scorey-40);
     
     fill(grey);
-    rect(scorex1,scorey, 100*f, 30);
+    rect(scorex1,scorey, 300, 30);
     
     fill(grey);
-    rect(scorex1, scorey+c1, 100*f, 30);
+    rect(scorex1, scorey+c1, 300, 30);
     
     fill(grey);
-    rect(scorex1, scorey+c2, 100*f, 30);
+    rect(scorex1, scorey+c2, 300, 30);
     
     fill(grey);
-    rect(scorex1, scorey+c3, 100*f, 30);
+    rect(scorex1, scorey+c3, 300, 30);
     
     fill(grey);
-    rect(scorex1, scorey+c4, 100*f, 30);
+    rect(scorex1, scorey+c4, 300, 30);
     
     fill(white);
-    rect(scorex1, scorey, waarde1, 30);
+    rect(scorex1, scorey, x1waarde, 30);
     fill(255,255,255);
     text(words[t[0]] + ' ' + round(waarde1/300*100) + '%',scorex + 4, scorey+20);
 
     fill(white);
-    rect(scorex1, scorey+c1, waarde2, 30);
+    rect(scorex1, scorey+c1, x2waarde, 30);
     fill(255,255,255);
     text(words[t[1]] + ' ' + round(waarde2/300*100) + '%',scorex + 4, scorey+c1+20)
     
     fill(white);
-    rect(scorex1, scorey+c2, waarde3, 30);
+    rect(scorex1, scorey+c2, x3waarde, 30);
     fill(255,255,255);
     text(words[t[2]] + ' ' + round(waarde3/300*100) + '%',scorex + 4, scorey+c2+20)
 
     fill(white);
-    rect(scorex1, scorey+c3, waarde4, 30);
+    rect(scorex1, scorey+c3, x4waarde, 30);
     fill(255,255,255);
     text(words[t[3]] + ' ' + round(waarde4/300*100) + '%',scorex + 4, scorey+c3+20);
     
     fill(white);
-    rect(scorex1, scorey+c4, waarde5, 30);
+    rect(scorex1, scorey+c4, x5waarde, 30);
     fill(255,255,255);
     text(words[t[4]] + ' ' + round(waarde5/300*100) + '%',scorex + 4, scorey+c4+20);
   }
-}
 
-function mousePressed (){
-  if(condition == 0){
-  r1x = 0;
-  r1y = -4;
 
-  r2x = -4;
-  r2y = 0;
-  
-  start = 1;
-  condition = 1;
-}
 }

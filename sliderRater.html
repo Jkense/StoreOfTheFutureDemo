@@ -13,13 +13,24 @@
   
   <script src="sliderRater.js"></script>
   <link rel="stylesheet" href="style.css">
-</head>
 
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <link rel="stylesheet" href="timeline.css">
+  <script src="timeline.js"></script>
+
+</head>
 <body>
+  <div id="timeline" data-currentTime="3"></div>
     <div id="p5">
 
     </div>
-    <a href="checkout.html">
+
+    <audio id="audioPlayer" class="noselect showMe" controls>
+      <source class="center" src="asset/voiceOver/AI_page 2_scan.mp3" type="audio/wav">
+      Your browser does not support the audio element.
+    </audio>
+
+    <a class="showMe" href="sliderAdjuster.html">
         <button type="button" class="storeButton btn btn-primary" >
           Let the party start! Let's try on some clothing
         </button>

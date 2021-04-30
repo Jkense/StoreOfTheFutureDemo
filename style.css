@@ -46,3 +46,12 @@ a {
 audio:focus {
   outline: none;
 }
+
+.showMe {
+  animation: waitForSeconds 0s 11s forwards;
+  visibility: hidden;
+}
+
+@keyframes waitForSeconds {
+  to   { visibility: visible; }
+}
