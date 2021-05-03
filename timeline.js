@@ -1,5 +1,5 @@
 $(function(){
-    $("#timeline").load("/timeline.html", 
+    $("#timeline").load("StoreOfTheFutureDemo/timeline.html", 
         function () {
             var currentTimeline = document.querySelector('#timeline').getAttribute('data-currentTime');
             var timelines = document.getElementsByClassName("timelineInput");
