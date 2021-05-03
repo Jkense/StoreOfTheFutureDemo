@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="utf-8" />   
-  <title>Can it be my de la clothes?</title>
+  <title>Or is it just my de la song?</title>
   <link rel="icon" type="image/png" href="/StoreOfTheFutureDemo/asset/favicon.png"/>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.9.0/p5.js"></script>
@@ -11,6 +11,7 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.9.0/addons/p5.sound.min.js"></script>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
   
+  <script src="sliderAdjuster.js"></script>
   <link rel="stylesheet" href="style.css">
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -19,25 +20,19 @@
 
 </head>
 <body>
-  <div id="timeline" data-currentTime="7"></div>
+  <div id="timeline" data-currentTime="5"></div>
+    <div id="p5">
 
-  <audio id="audioPlayer" class="noselect showMe" controls>
-    <source class="center" src="asset/voiceOver/AI_page 6_satisfied.mp3" type="audio/wav">
-    Your browser does not support the audio element.
-  </audio>
+    </div>
 
-  <div style="position: relative; top: 250px;">
-    <h1 class="text-center">You look fabulous!</h1>
-    <h2 class="text-center">What do you think about your new clothing?</h2>
-  </div>
-    <a href="clothingRecommendation.html">
-        <button type="button" class="storeButtonLeft btn btn-primary" >
-          I want to try on something new
-        </button>
-    </a>
-    <a href="outro.html">
-        <button type="button" class="storeButtonRight btn btn-info" >
-          I will buy it!
+    <audio id="audioPlayer" class="noselect showMe" controls>
+      <source class="center" src="asset/voiceOver/AI_page 5_try out clothing.mp3" type="audio/wav">
+      Your browser does not support the audio element.
+    </audio>
+
+    <a class="showMe" href="checkout.html">
+        <button type="button" class="storeButton btn btn-primary" >
+          Let the party start! Let's try on some clothing
         </button>
     </a>
 </body>
