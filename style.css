@@ -48,6 +48,7 @@ audio:focus {
 }
 
 .showMe {
+  visibility: inherit;
   /* animation: waitForSeconds 0s 11s forwards;
   visibility: hidden; */
 }
