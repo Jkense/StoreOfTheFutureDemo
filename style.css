@@ -40,7 +40,7 @@ a {
   position: absolute; 
   width: 300px; 
   left: calc(50% - 150px); 
-  top: 60%;
+  top: 82.5%;
 }
 
 audio:focus {
@@ -48,8 +48,8 @@ audio:focus {
 }
 
 .showMe {
-  animation: waitForSeconds 0s 11s forwards;
-  visibility: hidden;
+  /* animation: waitForSeconds 0s 11s forwards;
+  visibility: hidden; */
 }
 
 @keyframes waitForSeconds {
