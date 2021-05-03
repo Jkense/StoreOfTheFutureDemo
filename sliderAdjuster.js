@@ -10,14 +10,14 @@ let slider3;
 let slider4;
 let slider5;
 
-let canvaswidth = 600;
-let canvasheight = 850;
+let canvaswidth = 1200;
+let canvasheight = 450;
 
 let capturewidth = 600;
 let captureheight = 450;
 
-let scorex= 100;
-let scorey= captureheight+80;
+let scorex= 700;
+let scorey= 80;
 
 let scorex1 = scorex+150;
 
@@ -70,7 +70,7 @@ let t = [1,4,3,2,5];
 
 function setup() {
   var canvas = createCanvas(canvaswidth,canvasheight);
-  canvas.parent("#p5");
+  canvas.parent("#p5"); 
   capture = createCapture(VIDEO);
   capture.size(capturewidth, captureheight);
   capture.hide();
@@ -99,11 +99,11 @@ function setup() {
 }
 
 function draw() {
-  background(black); 
+  background(white); 
   
     noStroke();
-  fill(black);
-    rect(300,450, 600, 500);
+  //fill(black);
+    //rect(300,450, 600, 500);
   
   image(capture, 0, 0, capturewidth, captureheight);
   
@@ -144,10 +144,10 @@ function draw() {
     r1y = r1y += 2;
     //r2x = r2x += 5.5/2;
     
-    fill(white);
+    fill(black);
     text('Percentage'+' '+'of'+' '+'visual'+" "+'representation',scorex1+30, scorey-40);
     
-     fill(white);
+     fill(black);
     text('Characteristics',scorex+4, scorey-40);
     
     var word = random(words);
@@ -166,29 +166,29 @@ function draw() {
     fill(grey);
     rect(scorex1, scorey+c4, 300, 30);
     
-    fill(white);
+    fill(black);
     rect(scorex1,scorey, 5, 30);
-    fill(white);
+    fill(black);
     text(word,scorex+4,scorey+20);
     
-    fill(white);
+    fill(black);
     rect(scorex1, scorey+c1, 5, 30);
-    fill(white);
+    fill(black);
     text(word,scorex + 4, scorey+c1+20);
     
-    fill(white);
+    fill(black);
     rect(scorex1, scorey+c2, 5, 30);
-    fill(white);
+    fill(black);
     text(word,scorex + 4, scorey+c2+20);
     
-    fill(white);
+    fill(black);
     rect(scorex1, scorey+c3, 5, 30);
-    fill(white);
+    fill(black);
     text(word,scorex + 4, scorey+c3+20);
     
-    fill(white);
+    fill(black);
     rect(scorex1, scorey+c4, 5, 30);
-    fill(white);
+    fill(black);
     text(word,scorex + 4, scorey+c4+20);
   }
   
@@ -206,10 +206,10 @@ function draw() {
     //text(finalword,30,250);
     
     
-    fill(white);
+    fill(black);
     text('Percentage'+' '+'of'+' '+'visual'+" "+'representation',scorex1+30, scorey-40);
     
-    fill(white);
+    fill(black);
     text('Characteristics',scorex+4, scorey-40);
     
     fill(grey);
@@ -227,30 +227,30 @@ function draw() {
     fill(grey);
     rect(scorex1, scorey+c4, 300, 30);
     
-    fill(white);
+    fill(black);
     rect(scorex1, scorey, x1waarde, 30);
-    fill(255,255,255);
-    text(words[t[0]] + ' ' + round(waarde1/300*100) + '%',scorex + 4, scorey+20);
+    fill(black);
+    text(words[t[0]] + ' ' + round(x1waarde/300*100) + '%',scorex + 4, scorey+20);
 
-    fill(white);
+    fill(black);
     rect(scorex1, scorey+c1, x2waarde, 30);
-    fill(255,255,255);
-    text(words[t[1]] + ' ' + round(waarde2/300*100) + '%',scorex + 4, scorey+c1+20)
+    fill(black);
+    text(words[t[1]] + ' ' + round(x2waarde/300*100) + '%',scorex + 4, scorey+c1+20)
     
-    fill(white);
+    fill(black);
     rect(scorex1, scorey+c2, x3waarde, 30);
-    fill(255,255,255);
-    text(words[t[2]] + ' ' + round(waarde3/300*100) + '%',scorex + 4, scorey+c2+20)
+    fill(black);
+    text(words[t[2]] + ' ' + round(x3waarde/300*100) + '%',scorex + 4, scorey+c2+20)
 
-    fill(white);
+    fill(black);
     rect(scorex1, scorey+c3, x4waarde, 30);
-    fill(255,255,255);
-    text(words[t[3]] + ' ' + round(waarde4/300*100) + '%',scorex + 4, scorey+c3+20);
+    fill(black);
+    text(words[t[3]] + ' ' + round(x4waarde/300*100) + '%',scorex + 4, scorey+c3+20);
     
-    fill(white);
+    fill(black);
     rect(scorex1, scorey+c4, x5waarde, 30);
-    fill(255,255,255);
-    text(words[t[4]] + ' ' + round(waarde5/300*100) + '%',scorex + 4, scorey+c4+20);
+    fill(black);
+    text(words[t[4]] + ' ' + round(x5waarde/300*100) + '%',scorex + 4, scorey+c4+20);
   }
 
 
