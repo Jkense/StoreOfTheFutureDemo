@@ -13,8 +13,8 @@ let slider5;
 let canvaswidth = 1200;
 let canvasheight = 450;
 
-let capturewidth = 600;
-let captureheight = 450;
+let capturewidth = 450;
+let captureheight = 325;
 
 let scorex= 700;
 let scorey= 80;
