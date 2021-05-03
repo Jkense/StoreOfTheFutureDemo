@@ -110,27 +110,21 @@ function draw() {
   
   //filter(INVERT);
   
-  if(r1y >= 446){
+  if(r1y >= captureheight-4){
     r1y = r1y +=0;
     fill1 = 0;
     fill2 = 0;
     noStroke();
     fill(0,255,0, 160);
-    rect(300,r3y,600,10);
+    rect(0,r3y,capturewidth,10);
     fill(0,255,0,fill2);
-    rect(300,r3y+3,600,4);
+    rect(0,r3y+3,capturewidth,4);
     
     r3y = r3y -= 2;
-    
-  
-  
   }
  
- 
   if(r3y <= 4){
-    
-  start = 2; 
-    
+    start = 2; 
   }
   
   if(start == 1){

@@ -13,8 +13,8 @@ let slider5;
 let canvaswidth = 1200;
 let canvasheight = 450;
 
-let capturewidth = 600;
-let captureheight = 450;
+let capturewidth = 450;
+let captureheight = 325;
 
 let scorex= 700;
 let scorey= 80;
@@ -103,20 +103,17 @@ function draw() {
   
   //filter(INVERT);
   
-  if(r1y >= 446){
+  if(r1y >= captureheight-4){
     r1y = r1y +=0;
     fill1 = 0;
     fill2 = 0;
     noStroke();
     fill(0,255,0, 160);
-    rect(0,r3y,600,10);
+    rect(0,r3y,capturewidth,10);
     fill(0,255,0,fill2);
-    rect(0,r3y+3,600,4);
+    rect(0,r3y+3,capturewidth,4);
     
     r3y = r3y -= 2;
-    
-  
-  
   }
  
  
@@ -129,9 +126,9 @@ function draw() {
   if(start == 1){
     noStroke();
     fill(0,255,0,fill1);
-    rect(0,r1y,600,10);
+    rect(0,r1y,capturewidth,10);
     fill(0,255,0,fill2);
-    rect(0,r1y+3,600,4);
+    rect(0,r1y+3,capturewidth,4);
     //rect(r2x,r2y,10,canvasheight, 50);
     //de verhouding moet hier altijd hetzelfde zijn als Width/height
     r1y = r1y += 2;
