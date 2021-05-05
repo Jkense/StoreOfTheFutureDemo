@@ -21,7 +21,7 @@ let scorey= 80;
 
 let scorex1 = scorex+150;
 
-var scorexslide = scorex+150;
+var scorexslide = scorex+320;
 
 let white = 255;
 let black = 0;
@@ -76,23 +76,23 @@ function setup() {
   capture.hide();
   
   slider1= createSlider(0, 255,waarde1);
-  slider1.position(scorexslide, scorey+35);
+  slider1.position(scorexslide, scorey+35 +150);
   slider1.style('width', '300px');
   
   slider2= createSlider(0, 255, waarde2);
-  slider2.position(scorexslide,scorey+95);
+  slider2.position(scorexslide,scorey+95+150);
   slider2.style('width', '300px');
   
   slider3= createSlider(0, 255, waarde3);
-  slider3.position(scorexslide,scorey+155);
+  slider3.position(scorexslide,scorey+155+150);
   slider3.style('width', '300px');
   
   slider4= createSlider(0, 255, waarde4);
-  slider4.position(scorexslide,scorey+215);
+  slider4.position(scorexslide,scorey+215+150);
   slider4.style('width', '300px');
   
   slider5= createSlider(0, 255, waarde5);
-  slider5.position(scorexslide,scorey+275);
+  slider5.position(scorexslide,scorey+275+150);
   slider5.style('width', '300px');
   
   

@@ -5,7 +5,7 @@
   }
   
   function setup() {
-    let canvas = createCanvas(600, 600);
+    let canvas = createCanvas(400, 400);
     canvas.parent("p5");
     angleMode(DEGREES); // Change the mode to DEGREES
     colorMode(HSB);

@@ -70,25 +70,16 @@ function setup() {
   capture.size(capturewidth, captureheight);
   capture.hide();
   
-  //slider1= createSlider(0, 255, p1*2.55);
-   // slider1.position(25, 270);
-   // slider1.style('width', '80px');
+  if(condition == 0){
+    r1x = 0;
+    r1y = -4;
   
-  //slider2= createSlider(0, 255, p2*2.55);
-    //slider2.position(26,300);
-//    slider2.style('width', '80px');
-  
-  //slider3= createSlider(0, 255, p3*2.55);
-    //slider3.position(26,330);
-    //slider3.style('width', '80px');
-  
-  //slider4= createSlider(0, 255, p4*2.55);
-   // slider4.position(26,360);
-   // slider4.style('width', '80px');
-  
-  //slider5= createSlider(0, 255, p5*2.55);
-    //slider5.position(26,390);
-    //slider5.style('width', '80px');
+    r2x = -4;
+    r2y = 0;
+    
+    start = 1;
+    condition = 1;
+  }
 }
 
 function draw() {
@@ -244,14 +235,5 @@ function draw() {
 }
 
 function mousePressed (){
-  if(condition == 0){
-  r1x = 0;
-  r1y = -4;
 
-  r2x = -4;
-  r2y = 0;
-  
-  start = 1;
-  condition = 1;
-}
 }
