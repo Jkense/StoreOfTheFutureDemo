@@ -16,8 +16,8 @@ let canvasheight = 450;
 let capturewidth = 450;
 let captureheight = 325;
 
-let scorex= 700;
-let scorey= 80;
+let scorex= 500;
+let scorey= 60;
 
 let scorex1 = scorex+150;
 
